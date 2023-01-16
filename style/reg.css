@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body .nav{
+    justify-content: start;
+    background: rgb(37, 37, 37);
+    height: 10vh;
+}
+
+body .nav a{
+    margin-left: 1vh;
+    text-decoration: none;
+    color: white;
+}
+
+body .nav a img{
+    position: absolute;
+    top: 0;
+    height: 10vh;   
+}
+
+body .nav a .nav_logo{
+    margin-left: 7vh;
+    font-size: 2vh;
+    text-align: center;
+    width: 42vh;
+}
+
+body .nav a .nav_logo span{
+    font-weight: 600;
+    font-size: 1.2vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+body .form{
+    margin: 5vh 0 5vh 0;
+    display: flex;
+    height: 70vh;
+    width: 70%;
+    border-radius: 1vh;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.1);
+    border-top: 0.4vh solid rgba(255, 255, 255, 0.5);
+    border-left: 0.4vh solid rgba(255, 255, 255, 0.5);
+    box-shadow: 5vh 5vh 10vh rgba(0, 0, 0, 0.5);
+    transform: perspective(1000px);
+}
+
+body .form .img{
+    width: 50%;
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
+    background-image: url(https://www.doublehelical.com/wp-content/uploads/2018/06/DSC9004-800x445.jpg);
+    background-size: 190%;
+    background-position-x: -10vh;
+    background-repeat: no-repeat;
+    box-shadow: 1vh 0 1vh rgb(197, 197, 197);
+}
+.bgGradient{
+    position: absolute;
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
+    height: 70vh;
+    width: 50%;
+    background: linear-gradient(90deg,rgba(0,0,0,0.5) 80%,rgba(0,0,0,0.5) 90%,#272727 99%,#272727 100%);
+}
+
+.bgGradient h2{
+    position: relative;
+    color: white;
+    font-size: clamp(1rem, 3vw);
+    margin: 50px;
+    width: fit-content;
+    letter-spacing: 0.4vh;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.bgGradient p{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: clamp(1rem, 3vw);
+    margin: 50px;
+    width: fit-content;
+    letter-spacing: 0.4vh;
+    font-family: 'Source Code Pro', monospace;    
+}
+
+.bgGradient h2::before,
+.bgGradient h2::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.bgGradient h2::before{
+    background: rgb(0, 0, 0);
+    animation: writer 4s steps(21) 1s forwards;
+}
+
+@keyframes writer{
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink{
+    to {
+        background: transparent;
+    }
+}
+
+
+.bgGradient h2::after{
+    width: 0.125em;
+    background: white;
+    animation: writer 4s steps(21) 1s forwards,
+    blink 500ms steps(24) infinite;
+}
+
+body .form form{
+    margin: auto;
+    width: 60vh;
+    padding: 1vh;
+    height: auto;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5vh;
+    align-items: center;
+}
+
+body .form form .title{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+body .form form .title select{
+    width: 13vh;
+}
+
+body .form form .title input{
+    width: 20vh;
+}
+
+form :where(input, select, button){
+    height: 5vh;
+    width: 58vh;
+    border: none;
+    outline: none;
+    border-radius: 0.5vh;
+}
+
+form p{
+    font-size: 2.4vh;
+    padding: 0 0.5vh 0 0.5vh;
+    background: white;
+    margin-left: 2vh;    
+    position: relative;
+    top: 1.2vh;
+    width: fit-content;
+}
+
+form input, select{
+    border: 0.1vh solid #999;
+    padding: 0 1vh;
+}
+
+
+body .form form #crsdiv{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+body .form form #crsdiv input,body .form form #crsdiv select{
+    width: 28vh;
+}
+
+/* #attending{
+    width: 100%;
+    background: red;
+} */
+
+body .form form .profession{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+body .form form .profession input{
+    width: 27vh;
+}
+
+
+form .btns{
+    margin-top: 1vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+form button{
+    height: 6vh;
+    color: black;
+    font-size: 2.4vh;
+    font-weight: 500;
+    position: relative;
+    background: transparent;
+    border: 0.2vh solid #2081f0;
+    width: 45%;
+    text-transform: uppercase;
+    margin: auto;
+    overflow: hidden;
+    z-index: 100;
+    border-radius: 0.5vh;
+    transition: all 0.5s;
+}
+
+form button:hover{
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0.8vh 0.8vh 2vh rgb(51, 51, 51);
+    zoom: 103%;
+}
+
+form button::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: -10%;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transform: skewX(30deg);
+    background: #2081f0;
+    transition: all 0.7s;
+    animation: color_change 5s linear infinite;
+}
+
+form button:hover::before{
+    width: 120%;
+    top: 0;
+    left: -10%;
+}
